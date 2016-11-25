@@ -1,3 +1,4 @@
-echo $1
-echo abc"$1"
-echo "abc""123"
+echo "."
+echo abc"."
+name="."
+git add $name 
