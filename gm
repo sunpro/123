@@ -1,0 +1,22 @@
+REMOTE=`git remote`
+echo $REMOTE
+ORIGIN=origin
+#≤‚ ‘ «∑Ò≤ªŒ™ø’
+if test $REMOTE
+then 
+	#echo remote add
+	if [ $REMOTE=$ORIGIN ]
+	then
+		git remote rm origin
+	fi
+else
+	echo remote is null
+fi
+git remote add origin https://github.com/sunpro/"$1".git
+git push -u origin master
+if [ $? -eq 0 ]
+then 
+	echo push succeed!
+else 
+	echo push failed!
+fi
